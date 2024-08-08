@@ -1,0 +1,22 @@
+{
+  "name": "lib3",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/lib3/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "prepare": {
+      "command": "echo lib3"
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/lib3",
+        "main": "packages/lib3/src/index.ts",
+        "tsConfig": "packages/lib3/tsconfig.lib.json",
+        "assets": ["packages/lib3/*.md"]
+      }
+    }
+  }
+}
